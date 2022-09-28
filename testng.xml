@@ -6,12 +6,7 @@
     </listeners>
     <test thread-count="5" name="Test">
         <classes>
-            <class name="TestCases.Pet.Board_DELETE"></class>
-            <class name="TestCases.Pet.Board_CREATE"></class>
-            <class name="TestCases.Pet.PetTests_FindByStatus_GET"></class>
-            <class name="TestCases.Pet.PetTests_POST"></class>
-            <class name="TestCases.Pet.PetTests_PUT"></class>
-
+            <class name="TestCases.Test.TrelloTests"></class>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

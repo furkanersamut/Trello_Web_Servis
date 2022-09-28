@@ -1,43 +1,22 @@
 package Constants;
 
+import com.google.common.io.Resources;
+
+import java.net.URL;
 import java.util.Random;
 
 public interface TrelloConstants {
 
-    public  String BOARDS_ENDPOINT = "";
-    public  String GET_ENDPOINT = "";
-    public  String PUT_ENDPOINT = "";
-    public  String DELETE_ENDPOINT = "";
 
+    String API_KEY="fce429cdf1ee67cbfdc1545a3c99091f";
+    String API_TOKEN="720b60874667b998252ea653abf4930529090aa0117cf48690140fb0dca84e18";
 
-
-    String API_KEY="";
-    String API_TOKEN="";
-
-    String AUTH="key="+API_KEY+"&token="+API_TOKEN;
-
-    String BOARD_ID="6330e5a5047a7c013af90868";
-    String BoardName="MehmetFurkanBoard";
-    String BOARD_NAME="name="+BoardName;
-
-
-    default int numberGenerator(int low, int high) {
-
-        Random r = new Random();
-        int lowvalue = low;
-        int highvalue = high;
-        int result = r.nextInt(highvalue - lowvalue) + lowvalue;
-        return result;
-    }
-
-    public default void sleep(int second) {
-        try {
-            Thread.sleep(second);
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-        }
-    }
-
+    URL CreateBoard_JSON = Resources.getResource("CreateBoard.JSON");
+    URL CreateList_JSON = Resources.getResource("CreateList.JSON");
+    URL CreateCard_JSON = Resources.getResource("CreateCard.JSON");
+    URL DeleteBoard_JSON = Resources.getResource("DeleteBoard.JSON");
+    URL DeleteCard_JSON = Resources.getResource("DeleteCard.JSON");
+    URL UpdateCard_JSON = Resources.getResource("UpdateCard.JSON");
 
 
 }

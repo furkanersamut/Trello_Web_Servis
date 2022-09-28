@@ -19,7 +19,7 @@ public class Listeners extends TestListenerAdapter
     public void onStart(ITestContext testContext)
     {
         //specify location of the report
-        htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "/Reports/wassReport.html");
+        htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "/Reports/MehmetFurkanReport.html");
 
         htmlReporter.config().setDocumentTitle("Api Automation Report"); // Tile of report
         htmlReporter.config().setReportName("API Testing Report"); // name of the report
@@ -27,10 +27,6 @@ public class Listeners extends TestListenerAdapter
 
         extent=new ExtentReports();
         extent.attachReporter(htmlReporter);
-        extent.setSystemInfo("Project Name","Apı");
-        extent.setSystemInfo("Host name","localhost");
-        extent.setSystemInfo("Environemnt","QA");
-        extent.setSystemInfo("user","Tester");
 
     }
 
