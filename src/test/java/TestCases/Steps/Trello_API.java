@@ -1,4 +1,5 @@
-package TestCases;
+package TestCases.Steps;
+
 
 import Base.TestBase;
 import Constants.TrelloConstants;
@@ -6,7 +7,6 @@ import Constants.Trello_Variables;
 import com.google.common.io.Resources;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.json.JSONObject;
 import variables.Var;
@@ -78,7 +78,7 @@ public class Trello_API extends TestBase implements TrelloConstants {
                         .body(createBoardJSON)
                         .post(Var.apiUrl+"/1/boards/")
                         .then()
-                        //.statusCode(200)
+                        .statusCode(200)
                         .extract().response();
 
 

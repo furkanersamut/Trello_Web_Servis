@@ -1,16 +1,16 @@
-package TestCases;
+package TestCases.Test;
 
 
 import Constants.Trello_Variables;
-import TestCases.Trello_API;
+import TestCases.Steps.Trello_API;
 import org.testng.annotations.Test;
 
-// Java program select a random element from array
-
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.io.IOException;
+
+// Java program select a random element from array
 
 
 public class TrelloTests extends Trello_Variables {
